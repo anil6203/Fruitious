@@ -1,0 +1,19 @@
+{
+  "name": "fruitious",
+  "version": "1.0.0",
+  "description": "landing page for frutious",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anil6203/Fruitious.git"
+  },
+  "author": "Anil kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anil6203/Fruitious/issues"
+  },
+  "homepage": "https://github.com/anil6203/Fruitious#readme"
+}
