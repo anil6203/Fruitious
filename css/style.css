@@ -1037,6 +1037,7 @@ a{
 .btn--red-1{
    background-color: var(--color-primary-red-dark);
    border: none;
+   border: 1px solid var(--color-primary-white);
    color:var(--color-primary-white);
    display: block;
    margin: 0 auto;
@@ -1095,5 +1096,338 @@ a{
         margin-left: -3.5rem
     }
 }
+
+/************* SECTION TESTIMONILA **************/
+.seciton-slide{
+    background-color: var(--color-primary-white-smoke);
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+/* .slider{
+    position: relative;
+}
+
+.slide{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+} */
+
+.slider {
+    max-width: 100rem;
+    height: 40rem; 
+    margin: 0 auto;
+    position: relative;
+  
+    /* IN THE END */
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* height: 40rem; */
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* THIS creates the animation! */
+    transition: transform 1s;
+  }
+.testimonial{
+    /* background-color: red; */
+    padding: 4rem;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial__heading{
+    font-size: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+}
+.testimonial__heading::before {
+    content: '\201C';
+    position: absolute;
+    top: -5.7rem;
+    left: -6.8rem;
+    line-height: 1;
+    font-size: 15rem;
+    font-family: inherit;
+    color: var(--color-primary-red-dark);
+    z-index: 1;
+    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+.testimonial__text{
+    padding-bottom: 2rem;
+    text-align: justify;
+    font-size: 2rem;
+    word-break: break-all;
+    line-height: 1.5;
+    color: var(--color-primary-medium-gray);
+}
+
+.testimonial__author{
+    display: grid;
+    /* grid-template-rows: 1fr; */
+    grid-template-columns: 6.5rem 1fr;
+    column-gap: 2rem;
+   
+}
+
+.testimonial__photo{
+    width: 6.5rem;
+    border-radius: 50%;
+    background-size: cover;
+    grid-row: 1 / span 2;
+}
+.testimonial__name{
+    align-self: center;
+}
+
+.testimonial__location{
+    color: var(--color-primary-medium-gray);
+}
+.slider__btn {
+    border: none;
+    outline: none;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    z-index: 5;
+    font-size: 3rem;
+    text-align: center;
+    background-color: var(--color-secondary-white);
+}
+
+.slider__btn--left{
+    position:absolute;
+    top: 40%;
+    left: 6rem;
+    transform: translate(-50%, -50%);
+}
+
+.slider__btn--right{
+    position: absolute;
+    top: 40%;
+    right: 6rem;
+    transform: translate(50%, -50%);
+}
+.dots{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+}
+.dots__dot{
+   display: block;
+   width: 1rem;
+   height: 1rem;
+   border-radius: 50%;
+   background-color:var(--color-primary-white-grey);
+   margin: 1rem;
+   z-index: 1;
+   cursor: pointer;
+}
+
+/* .dots__dot:last-child {
+    margin: 0;
+  } */
+  
+  .dots__dot--active {
+    background-color: #888;
+    opacity: 1;
+  }
+
+@media all and (max-width: 600px){
+    .slider{
+        height: 50rem;
+    }
+    .slider__btn--left{
+        left: 3rem;
+    }
+    
+    .slider__btn--right{
+        right: 3rem;
+    }
+
+}
+
+@media all and (max-width: 425px){
+    .slider{
+        height: 60rem;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .slider{
+        height: 70rem;
+    }
+}
+
+@media all and (max-width: 275px) {
+    .slider{
+        height: 80rem;
+    }
+}
+
+/******** FOOTER ********/
+.footer{
+    padding: 8rem 3rem;
+    background-color: var(--color-primary-dark-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_logo-box{
+   /* background-color: white; */
+   margin-bottom: 3rem;
+   margin-top: -4rem;
+}
+
+.logo-red{
+    font-size: 8rem;
+    color: var(--color-primary-red-dark);
+}
+.footer__nav{
+   list-style-type: none;
+   display: flex;
+   margin-bottom: 4rem;
+}
+.footer__link{
+   color: var(--color-primary-white-grey);
+   opacity: .7;
+}
+.footer__link:hover,
+.footer__link:active{
+    opacity: 1;
+}
+.footer__copyright{
+    font-size: 1.7rem;
+    color:var(--color-primary-medium-gray);
+    letter-spacing: 1px;
+    line-height: 1.5;
+    word-break: break-all;
+}
+
+/********* END OF FOOTER *********/
+
+ /******** MODEL WINDOW **********/
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60rem;
+    background-color: #f3f3f3;
+    padding: 5rem 6rem;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.5s;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    transition: all 0.5s;
+  }
+  
+  .modal__header {
+    font-size: 3rem;
+    margin-bottom: 4.5rem;
+    line-height: 1.5;
+  }
+  
+  .modal__form {
+    margin: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  
+  .modal__form label {
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  
+  .modal__form input {
+    font-size: 1.7rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+  }
+  
+  .modal__form button {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    margin-top: 1rem;
+  }
+  
+  .btn--close-modal {
+    font-family: inherit;
+    color: inherit;
+    position: absolute;
+    top: 0.5rem;
+    right: 2rem;
+    font-size: 4rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    height: 5rem;
+    width: 5rem;
+    background-color:var(--color-primary-white);
+    border-radius: 50%;
+    outline: none;
+    z-index: 4;
+  }
+
+  .btn--close-modal:hover,
+  .btn--close-modal:active{
+    background-color:var(--color-secondary-white);
+  }
+  
+  
+  .btn__model{
+     padding: 2rem;
+     border: none;
+  } 
+  .btn__model--round{
+      border-radius: 12rem;
+  }
+
+  .btn__model--prop{
+      background-color: var(--color-secondary-white);
+      box-shadow: var(--color-primary-grey-shadow);
+  }
+  .btn__model--prop:hover,
+  .btn__model--prop:active{
+      background-color: var(--color-primary-medium-gray);
+  }
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  @media all and (max-width: 400px) {
+    .modal {
+        padding: 2rem 2rem;
+      }
+  }
+  /********* END OF MODEL WINDOW *******/
 
 
