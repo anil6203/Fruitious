@@ -70,15 +70,7 @@ body.addEventListener('click', closeSubmenu);
 
 
 //////////// STICKY NAVIGATION ////////////////////////////
-// const sectionAbout = document.querySelector('.section-about');
-// const initialCoords = sectionAbout.getBoundingClientRect();
-// window.addEventListener('scroll', function(){
-//     if(window.scroll.top < initialCoords.top){
-//         console.log(nav.classList);
-//         nav.classList.add('sticky');
-//     }else{
-//         nav.classList.remove('sticky');
-//     }
+
     
 const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
@@ -99,13 +91,42 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 
 headerObserver.observe(header);
 
+////////////////// TAB INDEX //////////////////////////
+const tabContainer = document.querySelector('.btn-box__plans');
+const tabs = document.querySelectorAll('.btn--tab');
+const plans = document.querySelectorAll('.display__plan');
 
+tabContainer.addEventListener('click', function(e){
+   
+    const clicked = e.target.closest('.btn--tab');
+    if(!clicked) return;
+    e.preventDefault();
+    tabs.forEach(t => t.classList.remove('btn--red--active'));
+    clicked.classList.add('btn--red--active');
 
-// if(navMenu.classList.contains('active')){
-    //     navMenu.classList.remove('active');
-    //     toggle.innerHTML = '<i class="fas fa-bars"></i>';
-    // }else{
-    //     navMenu.classList.add('active');
-    //     toggle.innerHTML = '<i class="fas fa-bars"></i>';
-    //     // toggle.innerHTML = `<i class="fas fa-times"></i>`;
-    // }
+    plans.forEach(function(plan){
+        if(clicked.classList.contains('btn--weekly') && plan.classList.contains('display__plan--weekly')){
+            plan.classList.add('plan-active');
+        }
+        else if(clicked.classList.contains('btn--monthly') &&  plan.classList.contains('display__plan--monthly')){
+            plan.classList.add('plan-active');
+        }
+        else if(clicked.classList.contains('btn--yearly') && plan.classList.contains('display__plan--yearly')){
+            plan.classList.add('plan-active');
+        }else{
+            plan.classList.remove('plan-active');
+        }
+       });
+    
+  });
+
+  ////////////////////// CARD PREVENT DEFAULT ///////////////////
+
+// cards = document.querySelectorAll('.cards');
+// cards.forEach(card => {
+//     card.addEventListener('click', e => e.preventDefault())});
+
+const containerCard = document.querySelector('.container-card');
+containerCard.addEventListener('click', function(e){
+    e.preventDefault();
+});
