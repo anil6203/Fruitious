@@ -122,11 +122,82 @@ tabContainer.addEventListener('click', function(e){
 
   ////////////////////// CARD PREVENT DEFAULT ///////////////////
 
-// cards = document.querySelectorAll('.cards');
-// cards.forEach(card => {
-//     card.addEventListener('click', e => e.preventDefault())});
-
 const containerCard = document.querySelector('.container-card');
 containerCard.addEventListener('click', function(e){
     e.preventDefault();
 });
+
+////////////////////// IMPLIMANTATION OF SLIDER ////////////////
+
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const btnLeft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
+const dotContainer = document.querySelector('.dots');
+const maxSlides = slides.length;
+let currentSlide = 0;
+
+const createDots = function(){
+    slides.forEach((_, i) => {
+        dotContainer.insertAdjacentHTML('beforeend', `<div class="dots__dot" data-slide=${i}></div>`);
+    });
+}
+
+const dotActive = function(slide){
+    document.querySelectorAll('.dots__dot').forEach((dot, i) => {
+            dot.classList.remove('dots__dot--active');
+    });
+    document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add('dots__dot--active');
+}
+
+const goToSlide = function(slide){
+    slides.forEach((s, i) => {
+        s.style.transform = `translate(${100 * (i - slide)}%)`;
+    });
+}
+
+
+const moveToLeft = function(){
+    if(currentSlide === maxSlides - 1){
+        currentSlide = 0;
+    }else{
+        currentSlide++;
+    }
+    goToSlide(currentSlide);
+    dotActive(currentSlide);
+}
+
+const moveToRight = function(){
+    if(currentSlide === 0){
+        currentSlide = maxSlides - 1;
+    }else{
+        currentSlide--;
+    }
+    goToSlide(currentSlide);
+    dotActive(currentSlide);
+}
+
+const resposiveDot = function(e){
+    if(e.target.classList.contains('dots__dot')){
+        // taking data-slide value with the use of dataset attribute
+        const slide = e.target.dataset.slide;
+        goToSlide(slide);
+        dotActive(slide);
+    }
+}
+
+const reponsiveToKeywordButton = function(e){
+    if(e.key === 'ArrowLeft') moveToRight();
+    if(e.key === 'ArrowRight') moveToLeft();
+}
+
+createDots();
+goToSlide(currentSlide);
+
+btnRight.addEventListener('click', moveToLeft);
+btnLeft.addEventListener('click', moveToRight);
+dotContainer.addEventListener('click', resposiveDot);
+
+document.addEventListener('keydown', reponsiveToKeywordButton);
+// You can call keyboard event on document object only.
+

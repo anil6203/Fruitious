@@ -302,7 +302,7 @@ a{
 
 @media all and (max-width: 700px) {
     .header{
-        height: 95vh;
+        height: 100vh;
         /* background-color: #a52a2a; */
         background-image: var(--linear-gradient-slight-red),
                                url(../img/header__3__1.jpg);
@@ -1219,6 +1219,7 @@ a{
     font-size: 3rem;
     text-align: center;
     background-color: var(--color-secondary-white);
+    cursor: pointer;
 }
 
 .slider__btn--left{
@@ -1260,7 +1261,12 @@ a{
     background-color: #888;
     opacity: 1;
   }
-
+@media all and (max-width: 900px) {
+    .slider{
+        height: 45rem;
+    }
+    
+}
 @media all and (max-width: 600px){
     .slider{
         height: 50rem;
