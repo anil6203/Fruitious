@@ -164,6 +164,9 @@ a{
 /*Tab navigation*/
 
 @media all and (max-width: 900px){
+    .nav{
+        padding: 1.5rem;
+     }
     .nav__menu{
         display: none;
         order: 2;
@@ -211,7 +214,17 @@ a{
 /*Mobile Navigation*/
 
 @media all and (max-width: 600px){
-    
+    .nav{
+       padding: 1rem;
+       background-color: var(--color-primary-red-dark);
+    }
+    .active.nav__menu{
+        display: block;
+        position: absolute;
+        top: 8rem;
+        right: .5rem;
+    }
+
 }
 @media all and (min-width: 901px) {
 
@@ -289,7 +302,7 @@ a{
 
 @media all and (max-width: 700px) {
     .header{
-        height: 100vh;
+        height: 95vh;
         /* background-color: #a52a2a; */
         background-image: var(--linear-gradient-slight-red),
                                url(../img/header__3__1.jpg);
@@ -1148,8 +1161,9 @@ a{
 
 .testimonial__heading{
     font-size: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     position: relative;
+    margin-bottom: 1.5rem;
 }
 .testimonial__heading::before {
     content: '\201C';
@@ -1192,6 +1206,7 @@ a{
 }
 
 .testimonial__location{
+    font-size: 1.2rem;
     color: var(--color-primary-medium-gray);
 }
 .slider__btn {
@@ -1315,7 +1330,8 @@ a{
     color:var(--color-primary-medium-gray);
     letter-spacing: 1px;
     line-height: 1.5;
-    word-break: break-all;
+    text-align: center;
+    padding: 1rem;
 }
 
 /********* END OF FOOTER *********/
