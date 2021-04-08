@@ -201,3 +201,66 @@ dotContainer.addEventListener('click', resposiveDot);
 document.addEventListener('keydown', reponsiveToKeywordButton);
 // You can call keyboard event on document object only.
 
+///////// SMOOTH SCROLLING OF NAV_LINKS ////
+
+navMenu.addEventListener('click', function(e){
+    e.preventDefault();
+    if(e.target.classList.contains('nav__link')){
+        const id = e.target.getAttribute('href');
+        document.querySelector(id).scrollIntoView({behavior: 'smooth'});
+    }
+});
+
+///////////// FADE OUT EFFECT OF NAV ////////////
+
+const handleHover = function(e, opacity){
+    if(e.target.classList.contains('hover')){
+        const link = e.target;
+        const siblings = link.closest('.nav').querySelectorAll('.hover');
+        siblings.forEach(function(el){
+            if(el !== link)
+                el.style.opacity = opacity;
+        })
+    }
+}
+nav.addEventListener('mouseover', function(e){
+   handleHover(e, 0.7);
+});
+
+nav.addEventListener('mouseout', function(e){
+    handleHover(e, 1);
+});
+
+//////////// MODEL WINDOW //////////////////
+
+const btnSignUp = document.querySelector('.button--sign-up');
+const btnCloseModal = document.querySelector('.btn--close-modal');
+const modalWindow = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+btnSignUp.addEventListener('click', function(e){
+     modalWindow.classList.remove('hidden');
+     overlay.classList.remove('hidden');
+});
+
+btnCloseModal.addEventListener('click', function(e){
+    modalWindow.classList.add('hidden');
+    overlay.classList.add('hidden');
+});
+
+//////////////// BTN EXPLORE AND LOAD MORE ////////
+
+const btnScrollFromExplore = document.querySelector('.btn--explore');
+const btnScrollFromLoadMore = document.querySelector('.btn--load');
+const sectionAbout = document.querySelector('#about');
+const sectionFeature = document.querySelector('#feature');
+
+btnScrollFromExplore.addEventListener('click', function(e){
+    e.preventDefault();
+    sectionAbout.scrollIntoView({behavior:'smooth'});
+});
+
+btnScrollFromLoadMore.addEventListener('click', function(e){
+    e.preventDefault();
+    sectionFeature.scrollIntoView({behavior:'smooth'});
+})
+

@@ -157,6 +157,14 @@ a{
     left: 0;
 }
 
+/* .hover:visited,
+.hover:link{
+  opacity: 1;
+}
+.hover:hover,
+.hover:active{
+    opacity: 0.5;
+} */
 
 
 

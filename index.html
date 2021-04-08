@@ -11,46 +11,46 @@
         <title>Frutious | Delicious Fruits For Healthy People</title>
 </head>
 <body>
-   <header class="header">
+   <header class="header" id="id-header">
        <nav class="nav">
           <div class="nav__logo-box">
-            <a class="logo" href="#"><i class="fas fa-apple-alt"></i></a>
+            <a class="logo hover" href="#"><i class="fas fa-apple-alt"></i></a>
           </div>
 
           <div class="nav__menu">
             <ul class="menu">
-               <li class="item"><a href="#">Home</a></li>
-               <li class="item"><a href="#">About</a></li>
+               <li class="item"><a class="nav__link hover" href="#id-header">Home</a></li>
+               <li class="item"><a class="nav__link hover" href="#about">About</a></li>
                <li class="item has-submenu">
-                 <a class="tabindex" tabindex="0">Plans</a>
+                 <a class="tabindex hover" tabindex="0">Plans</a>
                  <ul class="submenu">
-                    <li class="subitem"><a href="#">Weekly</a></li>
-                    <li class="subitem"><a href="#">Monthly</a></li>
-                    <li class="subitem"><a href="#">Yearly</a></li>
+                    <li class="subitem"><a class="nav__link hover" href="#plans">Weekly</a></li>
+                    <li class="subitem"><a class="nav__link hover" href="#plans">Monthly</a></li>
+                    <li class="subitem"><a class="nav__link hover" href="#plans">Yearly</a></li>
                  </ul>
               </li>
-              <li class="item"><a href="#">Features</a></li>
-              <li class="item"><a href="#">Testimonials</a></li>
+              <li class="item"><a class="nav__link hover" href="#feature">Features</a></li>
+              <li class="item"><a class="nav__link hover" href="#slide">Testimonials</a></li>
               
              </ul>
           </div>
           <div class="nav__button">
-            <a class="button" href="#">Log In</a>
-            <a class="button" href="#">Sign Up</a></li>
+            <a class="button hover" href="#">Log In</a>
+            <a class="button button--sign-up hover" href="#">Sign Up</a></li>
           </div> 
           <div class="nav__toggle">
-          <a class="toggle" href="#"><i class="fas fa-bars"></i></a></li>
+          <a class="toggle hover" href="#"><i class="fas fa-bars"></i></a></li>
           </div>
        </nav>
        <div class="header__heading">
              <h1 class="heading__primary">Place for healthy fruit</h1>
           <div class="btn-box">
-            <a class="btn btn--round btn--white" href="#" >Explore &#8595</a>
+            <a class="btn btn--round btn--white btn--explore" href="#" >Explore &#8595</a>
           </div>
        </div>
    </header> 
 
-   <section class="section-about">
+   <section class="section-about" id="about">
       <div class="u-center-text u-margin-bottom-big">
         <h2 class="heading-secondary">
           Delicious fruit for healty people
@@ -66,7 +66,7 @@
             <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Quaerat doloremque vero quae velit beatae quae velit beatae eum nobis itaque delectus.
             </p>
-            <a href="#" class="btn-text">Learn more &#8595</a>
+            <a href="#" class="btn-text btn--load">Learn more &#8595</a>
         </div>
         <div class="col-1-of-2 composition-order">
           <div class="composition">
@@ -79,7 +79,7 @@
       
     </section>
 
-    <section class="section-feature">
+    <section class="section-feature" id="feature">
        <div class="heading-box ">
           <h2 class="heading-secondary u-margin-bottom-small">
              Why do you choose fruitious ?
@@ -147,7 +147,7 @@
        
     </section>
 
-    <section class="section__plan">
+    <section class="section__plan" id="plans">
        <div class="plans">
          <div class="heading-box">
             <h2 class="heading-secondary u-margin-bottom-medium">
@@ -233,7 +233,7 @@
          </div>   
        </div>
     </section>
-    <section class="section-form">
+    <section class="section-form" id="form">
        <div class="form-container">
          <form action="#" class="form">
             <div class="u-margin-bottom-medium">
@@ -242,7 +242,7 @@
                 </h2>
             </div>
 
-            <div class="form__group">
+            <div class="form__group" >
                 <input type="text" class="form__input" placeholder="Full name" id="name" required>
             </div>
 
@@ -282,7 +282,7 @@
        </div>
     </section>
 
-    <section class="seciton-slide">
+    <section class="seciton-slide" id="slide">
        <div class="heading-box">
          <h2 class="heading-secondary u-margin-bottom-medium">
             Millons of people are getting healthier fruit
@@ -380,7 +380,7 @@
         &copy; Copyright by
         <a
           class="footer__link linkdin-link"
-          href="#"
+          href="https://www.linkedin.com/in/anil-kumar-427a83192/"
           >Anil Kumar</a
         >. All the images and icons are taken from different website. It is only for learning
         purpose not business;
