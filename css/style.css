@@ -133,7 +133,7 @@ a{
     position: relative;
 }
 .submenu{
-    background-color: var(--color-primary-red-dark);
+    background-color: var(--color-primary-red-light);
      display: none;
 }
 
@@ -178,7 +178,7 @@ a{
     .nav__menu{
         display: none;
         order: 2;
-        background-color: var(--color-primary-red-dark);
+        background-color: var(--color-primary-red-light);
     } 
     .menu{
         display: flex;
@@ -230,7 +230,7 @@ a{
         display: block;
         position: absolute;
         top: 8rem;
-        right: .5rem;
+        right: 0rem;
     }
 
 }
