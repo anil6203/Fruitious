@@ -218,14 +218,34 @@ btnLeft.addEventListener('click', moveToRight);
 dotContainer.addEventListener('click', resposiveDot);
 
 document.addEventListener('keydown', reponsiveToKeywordButton);
+
 // You can call keyboard event on document object only.
 
 ///////// SMOOTH SCROLLING OF NAV_LINKS ////
+
+// display__plan display__plan--weekly plan-active
 
 navMenu.addEventListener('click', function(e){
     e.preventDefault();
     if(e.target.classList.contains('nav__link')){
         const id = e.target.getAttribute('href');
+        if(e.target.classList.contains('nav__link--weekly')){
+            document.querySelector('.btn--red--active').classList.remove('btn--red--active');
+            document.querySelector('.btn--weekly').classList.add('btn--red--active');
+            document.querySelector('.plan-active').classList.remove('plan-active');
+            document.querySelector('.display__plan--weekly').classList.add('plan-active');
+        }
+        else if(e.target.classList.contains('nav__link--monthly')){
+            document.querySelector('.btn--red--active').classList.remove('btn--red--active');
+            document.querySelector('.btn--monthly').classList.add('btn--red--active');
+            document.querySelector('.plan-active').classList.remove('plan-active');
+            document.querySelector('.display__plan--monthly').classList.add('plan-active');
+        }else if(e.target.classList.contains('nav__link--yearly')){
+            document.querySelector('.btn--red--active').classList.remove('btn--red--active');
+            document.querySelector('.btn--yearly').classList.add('btn--red--active');
+            document.querySelector('.plan-active').classList.remove('plan-active');
+            document.querySelector('.display__plan--yearly').classList.add('plan-active');
+        }
         document.querySelector(id).scrollIntoView({behavior: 'smooth'});
     }
 });

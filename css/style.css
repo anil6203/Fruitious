@@ -689,7 +689,30 @@ a{
     background-color: var(--color-primary-red-dark);
 }
 
-.btn.btn--round.btn--red.btn--red--active{
+/* .btn--orange, .btn--green, .btn--orange-red{
+    margin-left: 1.5rem;
+}
+
+.btn--orange-red:link,
+.btn--orange-red:visited{
+    color: var(--color-primary-white);
+    background-color: rgb(184, 54, 7);
+}
+
+.btn--green:link,
+.btn--green:visited{
+    color: var(--color-primary-white);
+    background-color:rgb(231, 26, 26);
+}
+/* rgb(34, 194, 34) */
+/* .btn--orange:link,
+.btn--orange:visited{
+    color: var(--color-primary-white);
+    background-color: rgb(216, 12, 12);
+}  */
+/* rgb(245, 171, 33) */
+
+.btn.btn--round.btn--red--active{
     transform: translateY(-1rem);
 }
 
@@ -802,8 +825,11 @@ a{
     .btn--red{
         margin-left: 1.5rem;
     }
-    
-    
+
+    /* .btn--orange, .btn--green, .btn--orange-red{
+        margin-left: 1.5rem;
+    } */
+     
     .plan{
         padding: 0rem;
         width: 95%;
@@ -885,6 +911,14 @@ a{
         margin-left:.5rem;
     }
 
+    /* .btn--orange, .btn--green, .btn--orange-red{
+        margin-left: .5rem;
+    } */
+
+    .btn.btn--round.btn--red--active{
+        transform: translateY(.2rem);
+    }
+
     .plan{
         margin: 2rem auto;
         margin-top: 3rem;
@@ -937,6 +971,11 @@ a{
     .btn--red{
         margin-bottom: 2rem;
     }
+
+    /* .btn--orange, .btn--green, .btn--orange-red{
+        margin-bottom: 1rem;
+    } */
+
     .plane__image--img{
         width: 70%;
     }
@@ -957,7 +996,7 @@ a{
 }
 .form-container{
     width: 100%;
-    background-image:url(../img/apple-trees-large.jpg);
+    background-image:url(../img/tree_large_green.jpg);
     background-position: cover;
     background-repeat: no-repeat;
     background-size: 100% 100%;
