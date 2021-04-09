@@ -26,15 +26,33 @@ const toggleMenu = function(e){
     }
 }
 
+const closeToggle = function(e){
+    e.preventDefault();
+    const isClickedInside = e.target.closest('.item');
+    if(!isClickedInside)
+        return;
+    const clicked = navMenu.classList.contains('active');
+    if(isClickedInside && clicked){
+        if(!isClickedInside.classList.contains('has-submenu')){
+            navMenu.classList.remove('active');
+            document.querySelectorAll('.hover').forEach((e, i) => e.style.opacity = 1);
+        }
+       
+    }
+}
+
 // // Drop down List🧮 
 
 const dropDown = function(){
     if(this.classList.contains('submenu-active')){
        this.classList.remove('submenu-active');
-    }else if (menu.querySelector(".submenu-active")) {
-      menu.querySelector(".submenu-active").classList.remove("submenu-active");
-      this.classList.add("submenu-active");
+       navMenu.classList.remove('active');
+       document.querySelectorAll('.hover').forEach((e, i) => e.style.opacity = 1);
     }
+    // else if (menu.querySelector(".submenu-active")) {
+    //   menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    //   this.classList.add("submenu-active");
+    // }
     else {
         this.classList.add('submenu-active');
     }  
@@ -64,6 +82,7 @@ const closeSubmenu = function(e){
 toggle.addEventListener('click', toggleMenu);
 items.forEach(dropDownCheck);
 body.addEventListener('click', closeSubmenu);
+nav.addEventListener('click',closeToggle);
 
 
 ///////////// End OF NAVIGATION BAR /////////////////////////

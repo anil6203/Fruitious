@@ -204,8 +204,8 @@ a{
     .active.nav__menu{
         display: block;
         position: absolute;
-        top: 6rem;
-        right: .5rem;
+        top: 9.5rem;
+        right: 0rem;
     }
 
     .item .has-submenu{
