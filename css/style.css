@@ -385,7 +385,8 @@ a{
     width: 40%;
 }
 
-.btn-text{
+.btn-text:link,
+.btn-text:visited{
     display: inline-block;
     background-color: var(--color-primary-red-light);
     color: var(--color-primary-white);
@@ -402,11 +403,6 @@ a{
    
 }
 
-/* .btn-text:link,
-.btn-text:visited{
-    background-color: var(--color-primary-red-light);
-    color: var(--color-primary-white);
-} */
 .composition{
     padding: 1rem;
     position: relative;
